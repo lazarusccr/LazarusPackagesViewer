@@ -13,7 +13,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  BCPanel, BCLabel, BCComboBox, fphttpclient, fpjson, uCloneControls, LCLIntF;
+  BCPanel, BCLabel, BCComboBox, fphttpclient, fpjson, uCloneControls, LCLIntF,
+  jsonparser;
 
 resourcestring
   rsCantLoadJSON = 'Can''''t load JSON from server.';
