@@ -36,7 +36,7 @@ begin
   WriteStr(s, anIndex);
   clonedControl.Name := 'CloneOf_' + currentControl.Name + s;
   // Debug
-  clonedControl.Hint := clonedControl.Name;
+  // clonedControl.Hint := clonedControl.Name;
   CloneEvents(currentControl, clonedControl);
   if clonedControl is TWinControl then
     // Lainz: changed order to preserve positioning
