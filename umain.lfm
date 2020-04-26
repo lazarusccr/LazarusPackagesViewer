@@ -9,6 +9,7 @@ object frmMain: TfrmMain
   Color = clWhite
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  ShowHint = True
   LCLVersion = '2.1.0.0'
   object bcpHeader: TBCPanel
     Left = 0
@@ -209,6 +210,24 @@ object frmMain: TfrmMain
       StaticButton = False
     end
   end
+  object sbMain: TScrollBox
+    Left = 0
+    Height = 230
+    Top = 370
+    Width = 800
+    HorzScrollBar.Increment = 1
+    HorzScrollBar.Page = 1
+    HorzScrollBar.Smooth = True
+    HorzScrollBar.Tracking = True
+    HorzScrollBar.Visible = False
+    VertScrollBar.Increment = 1
+    VertScrollBar.Page = 1
+    VertScrollBar.Smooth = True
+    VertScrollBar.Tracking = True
+    Align = alClient
+    BorderStyle = bsNone
+    TabOrder = 2
+  end
   object bcpPackage: TBCPanel
     Left = 20
     Height = 250
@@ -249,6 +268,7 @@ object frmMain: TfrmMain
     Rounding.RoundX = 4
     Rounding.RoundY = 4
     TabOrder = 1
+    Visible = False
     object bclPackageTitle: TBCLabel
       Left = 20
       Height = 34
@@ -266,7 +286,7 @@ object frmMain: TfrmMain
       Background.Gradient1EndPercent = 35
       Background.Style = bbsClear
       Border.Style = bboNone
-      Caption = 'BGRABitmap'
+      Caption = 'BGRAControls'
       FontEx.Color = clDefault
       FontEx.FontQuality = fqFineAntialiasing
       FontEx.Height = 25
@@ -323,40 +343,11 @@ object frmMain: TfrmMain
       ClientHeight = 24
       ClientWidth = 720
       TabOrder = 1
-      object bclHomePage: TBCLabel
+      object bclDownload: TBCLabel
         Cursor = crHandPoint
         Left = 0
         Height = 24
-        Top = 0
-        Width = 93
-        Background.Gradient1.StartColor = clWhite
-        Background.Gradient1.EndColor = clBlack
-        Background.Gradient1.GradientType = gtLinear
-        Background.Gradient1.Point2YPercent = 100
-        Background.Gradient2.StartColor = clWhite
-        Background.Gradient2.EndColor = clBlack
-        Background.Gradient2.GradientType = gtLinear
-        Background.Gradient2.Point2YPercent = 100
-        Background.Gradient1EndPercent = 35
-        Background.Style = bbsClear
-        Border.Style = bboNone
-        Caption = 'Home Page'
-        FontEx.Color = 14447874
-        FontEx.FontQuality = fqFineAntialiasing
-        FontEx.Height = 18
-        FontEx.Shadow = False
-        FontEx.ShadowRadius = 5
-        FontEx.ShadowOffsetX = 5
-        FontEx.ShadowOffsetY = 5
-        FontEx.Style = []
-        FontEx.TextAlignment = bcaLeftCenter
-        Rounding.RoundX = 1
-        Rounding.RoundY = 1
-      end
-      object bclDownload: TBCLabel
-        Cursor = crHandPoint
-        Left = 103
-        Height = 24
+        Hint = 'http://packages.lazarus-ide.org/BGRAControls.zip'
         Top = 0
         Width = 81
         Background.Gradient1.StartColor = clWhite
@@ -382,6 +373,43 @@ object frmMain: TfrmMain
         FontEx.TextAlignment = bcaLeftCenter
         Rounding.RoundX = 1
         Rounding.RoundY = 1
+        OnClick = bclLinkClick
+        OnMouseEnter = bclLinkMouseEnter
+        OnMouseLeave = bclLinkMouseLeave
+      end
+      object bclHomePage: TBCLabel
+        Cursor = crHandPoint
+        Left = 91
+        Height = 24
+        Hint = 'https://github.com/bgrabitmap/bgracontrols'
+        Top = 0
+        Width = 93
+        Background.Gradient1.StartColor = clWhite
+        Background.Gradient1.EndColor = clBlack
+        Background.Gradient1.GradientType = gtLinear
+        Background.Gradient1.Point2YPercent = 100
+        Background.Gradient2.StartColor = clWhite
+        Background.Gradient2.EndColor = clBlack
+        Background.Gradient2.GradientType = gtLinear
+        Background.Gradient2.Point2YPercent = 100
+        Background.Gradient1EndPercent = 35
+        Background.Style = bbsClear
+        Border.Style = bboNone
+        Caption = 'Home Page'
+        FontEx.Color = 14447874
+        FontEx.FontQuality = fqFineAntialiasing
+        FontEx.Height = 18
+        FontEx.Shadow = False
+        FontEx.ShadowRadius = 5
+        FontEx.ShadowOffsetX = 5
+        FontEx.ShadowOffsetY = 5
+        FontEx.Style = []
+        FontEx.TextAlignment = bcaLeftCenter
+        Rounding.RoundX = 1
+        Rounding.RoundY = 1
+        OnClick = bclLinkClick
+        OnMouseEnter = bclLinkMouseEnter
+        OnMouseLeave = bclLinkMouseLeave
       end
     end
     object bcpPackageLPK: TPanel
