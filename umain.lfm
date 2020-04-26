@@ -9,6 +9,7 @@ object frmMain: TfrmMain
   Color = clWhite
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  Position = poDesktopCenter
   ShowHint = True
   LCLVersion = '2.1.0.0'
   object bcpHeader: TBCPanel

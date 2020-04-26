@@ -1,5 +1,12 @@
 unit umain;
 
+{
+  ToDo:
+  - ScrollBox Limit (overflow of smallint limit of positions)
+  - If you select DataControls a division by zero is shown
+  - Try to display multiline text for descriptions (Fix AutoSize of TBCLabel)
+}
+
 {$mode objfpc}{$H+}
 
 interface
@@ -239,8 +246,8 @@ var
   count: integer;
 begin
   HideAll;
-  sbMain.Visible := False;
   count := 0;
+  sbMain.Visible := False;
   for i:=0 to sbMain.ControlCount-1 do
   begin
     sbMain.Controls[i].Visible :=

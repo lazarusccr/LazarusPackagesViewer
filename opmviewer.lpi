@@ -21,7 +21,7 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="opmviewer"/>
+            <Filename Value="release\$(TargetCPU)-$(TargetOS)\opmviewer"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -80,7 +80,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="opmviewer"/>
+      <Filename Value="debug\$(TargetCPU)-$(TargetOS)\opmviewer"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
